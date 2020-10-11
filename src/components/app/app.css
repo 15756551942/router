@@ -4,8 +4,13 @@
     display: table;
     clear: both;
 } */
+
 .container{
     height: 100%;
+    /* width: 300px; */
+    /* display: inline-block; */
+    /* float: left; */
+    display: flex;
 }
 
 .nav_left{
@@ -31,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     padding: 6% 18% 6% 10%;
+    text-decoration: none;
 }
 
 .nav_list{
@@ -41,7 +47,7 @@
     background-color: #7a7e88;
 }
 
-.art_list_show{
+/* .art_list_show{
     text-align: center;
     padding: 5% 0;
     display: block;
@@ -59,4 +65,4 @@
 
 .art_list_hidden:hover{
     background-color:  #7a7e88;
-}
+} */
