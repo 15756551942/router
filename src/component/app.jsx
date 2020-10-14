@@ -1,10 +1,12 @@
 import React from 'react'
-import {NavLink,Route} from 'react-router-dom'
+import {NavLink,Route,Switch} from 'react-router-dom'
 
 import './app.css'
 import '../clearstyle/reset.css'
 import '../iconfont/css/all.css'
-import NavList from '../views/navlist'
+import Art from '../views/art'
+import BackSystem from '../views/backsystem'
+import  NavList from '../views/navlist'
 
 class App extends React.Component{
     render(){
@@ -20,22 +22,30 @@ class App extends React.Component{
                 </div>
                 <div className="container">
                     <div className="nav_left">
-                        <div>信息管理</div>
-                        <div className="item">公司列表</div>
+                        <NavLink to='info' style={{textDecoration:'none'}}><div>信息管理</div></NavLink>
+                        <NavLink to='/art' style={{textDecoration:'none'}}><div>Article管理</div></NavLink>
+                        <Switch>
+                            <Route path='/art' component={Art}></Route>
+                        </Switch>
+                        <NavLink to='rencai' style={{textDecoration:'none'}}><div>人才管理</div></NavLink>
+                        <NavLink to='tuijian' style={{textDecoration:'none'}}><div>推荐管理</div></NavLink>
+                        <NavLink to='/backsystem' style={{textDecoration:'none'}}><div>后台管理</div></NavLink>
+                        <Switch>
+                            <Route path='/backsystem' component={BackSystem}></Route>
+                        </Switch>
+                        <NavLink to='user' style={{textDecoration:'none'}}><div>用户管理</div></NavLink>
+                        <NavLink to='content' style={{textDecoration:'none'}}><div>内容管理</div></NavLink>
+                        {/* <div className="item">公司列表</div>
                         <div className="item">职位列表</div>
-                        <div>Article管理</div>
                         <div className="item"><NavLink to='/navlist'>Article列表</NavLink></div>
-                        <div>人才管理</div>
-                        <div>推荐管理</div>
-                        <div>后台管理</div>
                         <div className="item">模块管理</div>
                         <div className="item">角色管理</div>
                         <div className="item">密码修改</div>
-                        <div className="item">账户管理</div>
-                        <div>用户管理</div>
-                        <div>内容管理</div>
+                        <div className="item">账户管理</div> */}
                     </div>
-                    <Route path='/navlist' component={NavList}/>
+                    <div>
+                        <Route path='/navlist' component={NavList}/>
+                    </div>
                 </div>
             </div>
         )
