@@ -43,6 +43,9 @@
 .nav_left div{
     height: 50px;
     line-height: 50px;
+}
+
+.manager{
     color: white;
 }
 

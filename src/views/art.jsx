@@ -3,10 +3,6 @@ import {NavLink} from 'react-router-dom'
 
 import './art.css'
 
-// import  NavList from '../views/navlist'
-
-
-
 class Art extends React.Component{
     render(){
         return(
