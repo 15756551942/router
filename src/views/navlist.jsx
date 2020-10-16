@@ -3,7 +3,16 @@ import React from 'react'
 import './navlist.css'
 
 class NavList extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+        tit:['ID','名称','类型','发布时间','修改时间','发布者','状态','操作'],
+        lists:[1,'我做完了','行业大图',20200101,20200202,'admin','在线','上线']
+        }
+    }
     render(){
+        const tit = this.state.tit
+        const lists = this.state.lists// eslint-disable-line no-unused-vars
         return(
             <div>
                 <div className="content_right">
@@ -18,156 +27,26 @@ class NavList extends React.Component{
                         <table  className="list_bottom">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>名称</th>
-                                    <th>类型</th>
-                                    <th>发布时间</th>
-                                    <th>修改时间</th>
-                                    <th>发布者</th>
-                                    <th>状态</th>
-                                    <th>操作</th>
+                                    {
+                                        tit.map((name,index) => <th key={index}>{name}</th>)
+                                    }
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>我做完了</td>
-                                    <td>行业大图</td>
-                                    <td>2020-06-23</td>
-                                    <td>2020-09-07</td>
-                                    <td>admin</td>
-                                    <td>上线</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
+                                    {
+                                        lists.map((name,index) => <td key={index}>{name}</td>)
+                                    }
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>撒</td>
-                                    <td>找职位Banner</td>
-                                    <td>2020-06-13</td>
-                                    <td>2020-09-07</td>
-                                    <td>admin</td>
-                                    <td>上线</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
+                                    {
+                                        lists.map((name,index) => <td key={index}>{name}</td>)
+                                    }
                                 </tr>
                                 <tr>
-                                    <td>3</td>
-                                    <td>天堂</td>
-                                    <td>首页Banner</td>
-                                    <td>2020-09-07</td>
-                                    <td>2020-09-16</td>
-                                    <td>admin</td>
-                                    <td>在线</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>再删鲨了你</td>
-                                    <td>首页Banner</td>
-                                    <td>2020-06-22</td>
-                                    <td>2020-09-07</td>
-                                    <td>admin</td>
-                                    <td>草稿</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>1111</td>
-                                    <td>行业大图</td>
-                                    <td>2020-07-24</td>
-                                    <td>2020-09-07</td>
-                                    <td>admin</td>
-                                    <td>草稿</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>24</td>
-                                    <td>首页Banner</td>
-                                    <td>2020-09-07</td>
-                                    <td>2020-09-16</td>
-                                    <td>admin</td>
-                                    <td>草稿</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>1</td>
-                                    <td>首页Banner</td>
-                                    <td>2020-09-07</td>
-                                    <td>2020-09-16</td>
-                                    <td>admin</td>
-                                    <td>上线</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>2</td>
-                                    <td>首页Banner</td>
-                                    <td>2020-09-07</td>
-                                    <td>2020-09-16</td>
-                                    <td>admin</td>
-                                    <td>上线</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>3</td>
-                                    <td>首页Banner</td>
-                                    <td>2020-09-07</td>
-                                    <td>2020-09-16</td>
-                                    <td>admin</td>
-                                    <td>上线</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>1111</td>
-                                    <td>找职位Banner</td>
-                                    <td>2020-07-28</td>
-                                    <td>2020-09-07</td>
-                                    <td>admin</td>
-                                    <td>上线</td>
-                                    <td>
-                                        <span>下线</span>
-                                        <span>编辑</span>
-                                        <span>删除</span>
-                                    </td>
+                                    {
+                                        lists.map((name,index) => <td key={index}>{name}</td>)
+                                    }
                                 </tr>
                             </tbody>
                         </table>

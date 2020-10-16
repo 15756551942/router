@@ -10,6 +10,14 @@ import  NavList from '../views/navlist'
 import Info from '../views/info'
 
 class App extends React.Component{
+
+    // constructor(props){
+    //     super(props)
+    //     this.state = {
+    //         lists:[{num:1,name:'我做完了',type:'行业大图',pubtime:20200101,modtime:20200202,puber:'admin',sta:'在线',ope:'上线'}]
+    //     }
+    // }
+
     render(){
         return(
             <div>
